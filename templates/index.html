@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %} Формульные конструкции {% endblock %}
+
+{% block content %}
+
+<section id="main-page-content">
+ 
+ 		<article id="banner">
+	        <div class="jumbotron jumbotron-fluid jumbotron-image">
+	              <div class="container text-center text-light">
+	                <h2 class="display-4" style="margin-bottom: 5rem">Проект "Жизненные стандарты"</h2>
+	                <p class="lead">Карта индексов цен и зарплат за XVIII – первую половину XIX вв</p>
+	              </div>
+	        </div>
+	    </article>
+	
+	<article id="overview">
+		<div class="container">
+		
+  			<div class="row my-5" id="row1">
+   				<div class="col-sm text-center">
+      				<p>Цель проекта – составить индексы цен и зарплат за XVIII – первую половину XIX вв. по ряду регионов. На основе анализа полученных данных оценить роль крепостного права для рынка труда в дореформенной России, и подготовить почву для сравнения с другими странами, в частности Данией и Испанией.</p>
+    			</div>
+    			<div class="col-sm text-center">
+      				<p>Проект призван решить одну из фундаментальных задач, стоящих сейчас перед экономической историей России – рассчитать ключевые показатели экономического развития страны на протяжении полутора столетий.</p>
+    			</div>
+    			<div class="col-sm text-center">
+      				<p>Проект носит прикладной характер, поскольку основная задача - сбор архивных данных по единой методике. Также в рамках проекта предполагается синтез и дальнейшее развитие персональные базы данных отдельных исследователей, которые войдут в его коллектив.</p>
+    			</div>
+  			</div>
+  			
+  			<div class="row my-5" id="row2">
+    			<div class="col-sm-4">
+    			
+    			<h3 class="mb-5" id="maptitle">Карта жизненных стандартов</h3>
+    			
+    				<form class="p-4 bg-light" id="search-form">
+    				
+		      			<div class="form-group mb-4" id="item_type">
+		      				<p><label for="item-type">Тип продукта</label></p>
+		      				<select id="item-type" class="selectpicker" multiple title="Выберете тип..." name="item_type">
+		      				{% for itype in item_types %}
+		      				{{ itype | safe }}
+		      				{% endfor %}
+							</select>
+		      			</div>
+		      			
+		      			<div class="form-group mb-4" id="region">
+		      				<p><label for="region">Регион</label></p>
+		      				<select class="selectpicker" id="region"  multiple  title="Выберете регион..." name="region">
+		      				{% for region in regions %}
+		      				{{ region | safe }}
+		      				{% endfor %}
+							</select>
+		      			</div>
+
+		      			
+  						<button type="submit"  id="search-btn" class="btn btn-search text-light">Search</button>
+		      		</form>
+    				
+    			</div>
+    			<div class="col-sm-8 embed-responsive embed-responsive-16by9" style="background-color:grey">
+      				<iframe class="map" id="mainmap" src="/map"></iframe>
+    			</div>
+  			</div>
+		</div>
+		
+		
+		
+	</article>
+	
+
+	<div class="container">
+  			<div class="row my-5" id="row2">
+  			</div>
+  	</div>
+	
+
+</section>
+	
+
+				
+{% endblock %}

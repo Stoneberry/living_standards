@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3fe67767b37c4a43ab333ba5b8bf69e8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_3fe67767b37c4a43ab333ba5b8bf69e8" ></div>
+        
+</body>
+<script>    
+    
+            var map_3fe67767b37c4a43ab333ba5b8bf69e8 = L.map(
+                "map_3fe67767b37c4a43ab333ba5b8bf69e8",
+                {
+                    center: [56.6175962, 33.5179093],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1b8e313337ea421290823e87d4857ded = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_3fe67767b37c4a43ab333ba5b8bf69e8);
+        
+    
+            var marker_cluster_187547a358ff47eab5b57bf0a10aa427 = L.markerClusterGroup(
+                {}
+            );
+            map_3fe67767b37c4a43ab333ba5b8bf69e8.addLayer(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+            var circle_marker_2a2231f3b94e42549b9cea807a816022 = L.circleMarker(
+                [55.7495, 37.6413],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_eab08f254b3f48a2b39b1bc1a5608810 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_085844eb0d554b3ababe4a264b1ab8de = $(`<div id="html_085844eb0d554b3ababe4a264b1ab8de" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>Москва</td></tr>       <tr><td>Регион</td><td>Москва</td></tr>       <tr><td>Город</td><td>Москва</td></tr>       <tr><td>Тип</td><td>city</td></tr>       <tr><td>Кол-во предметов</td><td>251</td></tr>     </table>     <a href="/places/0" class="places" id="place_0" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_eab08f254b3f48a2b39b1bc1a5608810.setContent(html_085844eb0d554b3ababe4a264b1ab8de);
+        
+
+        circle_marker_2a2231f3b94e42549b9cea807a816022.bindPopup(popup_eab08f254b3f48a2b39b1bc1a5608810)
+        ;
+
+        
+    
+    
+            circle_marker_2a2231f3b94e42549b9cea807a816022.bindTooltip(
+                `<div>
+                     Москва
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dcf670e555d44fb892fdaa29d51df074 = L.circleMarker(
+                [55.62256, 37.84042],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_ed0687e5ddaf4ff3b6a20b0b6420a794 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f1f73ae5fac54aa9a99e6501c4b6babf = $(`<div id="html_f1f73ae5fac54aa9a99e6501c4b6babf" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>Угрешский монастырь</td></tr>       <tr><td>Регион</td><td>Москва</td></tr>       <tr><td>Город</td><td>Москва</td></tr>       <tr><td>Тип</td><td>monastery</td></tr>       <tr><td>Кол-во предметов</td><td>19</td></tr>     </table>     <a href="/places/1" class="places" id="place_1" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_ed0687e5ddaf4ff3b6a20b0b6420a794.setContent(html_f1f73ae5fac54aa9a99e6501c4b6babf);
+        
+
+        circle_marker_dcf670e555d44fb892fdaa29d51df074.bindPopup(popup_ed0687e5ddaf4ff3b6a20b0b6420a794)
+        ;
+
+        
+    
+    
+            circle_marker_dcf670e555d44fb892fdaa29d51df074.bindTooltip(
+                `<div>
+                     Угрешский монастырь
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_222733b793de41b09ce116087a80a804 = L.circleMarker(
+                [55.75272, 37.62897],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_6bec9e6941a14ce18f24107538641c0f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d3dd523d1380452991efd4a3979c2953 = $(`<div id="html_d3dd523d1380452991efd4a3979c2953" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>Знаменский монастырь </td></tr>       <tr><td>Регион</td><td>Москва</td></tr>       <tr><td>Город</td><td>Москва</td></tr>       <tr><td>Тип</td><td>monastery</td></tr>       <tr><td>Кол-во предметов</td><td>15</td></tr>     </table>     <a href="/places/2" class="places" id="place_2" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_6bec9e6941a14ce18f24107538641c0f.setContent(html_d3dd523d1380452991efd4a3979c2953);
+        
+
+        circle_marker_222733b793de41b09ce116087a80a804.bindPopup(popup_6bec9e6941a14ce18f24107538641c0f)
+        ;
+
+        
+    
+    
+            circle_marker_222733b793de41b09ce116087a80a804.bindTooltip(
+                `<div>
+                     Знаменский монастырь 
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e428af6c90045e5b38c6024c912bfd1 = L.circleMarker(
+                [56.2756, 37.7569],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_2aae1fbf5e214d4087b0afd499d81506 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4df5601ccedb4b8fbe76241c8693091c = $(`<div id="html_4df5601ccedb4b8fbe76241c8693091c" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>Труневки</td></tr>       <tr><td>Регион</td><td>Московская область</td></tr>       <tr><td>Город</td><td>None</td></tr>       <tr><td>Тип</td><td>village</td></tr>       <tr><td>Кол-во предметов</td><td>1</td></tr>     </table>     <a href="/places/3" class="places" id="place_3" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_2aae1fbf5e214d4087b0afd499d81506.setContent(html_4df5601ccedb4b8fbe76241c8693091c);
+        
+
+        circle_marker_3e428af6c90045e5b38c6024c912bfd1.bindPopup(popup_2aae1fbf5e214d4087b0afd499d81506)
+        ;
+
+        
+    
+    
+            circle_marker_3e428af6c90045e5b38c6024c912bfd1.bindTooltip(
+                `<div>
+                     Труневки
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d5ff9c0344cf4090b545488c58da6b57 = L.circleMarker(
+                [52.791000000000004, 35.2371],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_b8d29f961e4e46b7a52b73c080e61bfe = L.popup({"maxWidth": "100%"});
+
+        
+            var html_543052b85b604c57aa6bfbdfe41a9806 = $(`<div id="html_543052b85b604c57aa6bfbdfe41a9806" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>село Робье</td></tr>       <tr><td>Регион</td><td>Орловская область</td></tr>       <tr><td>Город</td><td>None</td></tr>       <tr><td>Тип</td><td>village</td></tr>       <tr><td>Кол-во предметов</td><td>1</td></tr>     </table>     <a href="/places/4" class="places" id="place_4" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_b8d29f961e4e46b7a52b73c080e61bfe.setContent(html_543052b85b604c57aa6bfbdfe41a9806);
+        
+
+        circle_marker_d5ff9c0344cf4090b545488c58da6b57.bindPopup(popup_b8d29f961e4e46b7a52b73c080e61bfe)
+        ;
+
+        
+    
+    
+            circle_marker_d5ff9c0344cf4090b545488c58da6b57.bindTooltip(
+                `<div>
+                     село Робье
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1705ec9d91504182bb0d6786107d00c7 = L.circleMarker(
+                [57.526, 38.3247],
+                {"bubblingMouseEvents": true, "color": "gray", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_187547a358ff47eab5b57bf0a10aa427);
+        
+    
+        var popup_0d36f9713821431a93c4707bcd3469a2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e6e42634320542aaa0aeb609a424c421 = $(`<div id="html_e6e42634320542aaa0aeb609a424c421" style="width: 100.0%; height: 100.0%;">     <table cellspacing="2" border="1" cellpadding="5" width="200" style="text-align:center;margin-bottom:10px;">       <tr><td>Название</td><td>Углич</td></tr>       <tr><td>Регион</td><td>Ярославская область</td></tr>       <tr><td>Город</td><td>Углич</td></tr>       <tr><td>Тип</td><td>city</td></tr>       <tr><td>Кол-во предметов</td><td>2</td></tr>     </table>     <a href="/places/5" class="places" id="place_5" target="_blank">Смотреть предметы</a>     </div>`)[0];
+            popup_0d36f9713821431a93c4707bcd3469a2.setContent(html_e6e42634320542aaa0aeb609a424c421);
+        
+
+        circle_marker_1705ec9d91504182bb0d6786107d00c7.bindPopup(popup_0d36f9713821431a93c4707bcd3469a2)
+        ;
+
+        
+    
+    
+            circle_marker_1705ec9d91504182bb0d6786107d00c7.bindTooltip(
+                `<div>
+                     Углич
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

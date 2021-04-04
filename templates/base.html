@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery-ui.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/living_standards.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-table.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-select.min.css') }}">
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+ 
+    <body>
+    
+    	<header>
+    		<nav class="navbar navbar-expand navbar-dark bg-white">
+  				<a class="navbar-brand" href="#">Жизненные стандарты</a>
+  					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    					<span class="navbar-toggler-icon"></span>
+  					</button>
+  				<div class="collapse navbar-collapse" id="navbarsExample02">
+    				<ul class="navbar-nav mr-auto">
+      					<li class="nav-item active">
+        					<a id="main-page" class="nav-link main-page-nav" href="#">Главная</a>
+      					</li>
+      					<li class="nav-item active">
+        					<a id="map-page" class="nav-link main-page-nav" href="#row2">Карта</a>
+      					</li>
+      					<li class="nav-item active">
+        					<a id="description-page" class="nav-link main-page-nav" href="#row1">О проекте</a>
+      					</li>
+    				</ul>
+  				</div>
+			</nav>
+    	</header>
+
+
+   	  <main>
+        <div>
+            {% block content %} {% endblock %}
+        </div>
+      </main>
+      
+      
+      
+
+      <footer class="container-fluid text-center p-3">
+        <p class="float-end"><a class="personal-link text-light" href="#">Вернуться к началу</a></p>
+        <p class="text-light">© 2020-2021 НИУ ВШЭ</p>
+      </footer>
+      
+      
+      
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap-table.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap-select.min.js') }}"></script>
+
+    </body> 
+</html>
